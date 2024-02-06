@@ -7,8 +7,19 @@
     <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
 </head>
 <body>
-    <a-scene>
-        
+    <a-scene background="color:rgb(220, 220, 220)">
+        <a-entity camera wasd-controls look-controls position="0 2.0 0">
+            <a-entity cursor="rayOrigin:mouse;" raycaster="far:20; interval:200; objects:.interactive"></a-entity>
+        </a-entity>
+
+        <a-entity class="ground"
+                geometry="primitive:plane; width:14; height:14"
+                material="color:rgb(150, 150, 150)"
+                position="0 0 0"
+                rotation="-90 0 0">
+        </a-entity>
+
+
     </a-scene>
 </body>
 </html>
