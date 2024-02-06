@@ -19,7 +19,27 @@
                 rotation="-90 0 0">
         </a-entity>
 
-
+        <!--walls-->
+        <a-entity>
+            <a-entity class="wall" id="right-wall"
+                    geometry="primitive:plane; width:14; height:14"
+                    material="color:rgb(220, 220, 220)"
+                    position="7 7 0"
+                    rotation="0 -90 0">
+            </a-entity>
+            <a-entity class="wall" id="left-wall"
+                    geometry="primitive:plane; width:14; height:14"
+                    material="color:rgb(220, 220, 220)"
+                    position="-7 7 0"
+                    rotation="0 90 0">
+            </a-entity>
+            <a-entity class="wall" id="right-wall"
+                    geometry="primitive:plane; width:14; height:14"
+                    material="color:rgb(220, 220, 220)"
+                    position="0 7 -7"
+                    rotation="0 0 -90">
+            </a-entity>
+        </a-entity>
     </a-scene>
 </body>
 </html>
