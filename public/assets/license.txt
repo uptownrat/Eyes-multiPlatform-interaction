@@ -1,0 +1,11 @@
+Model Information:
+* title:	Low Poly Eyeball
+* source:	https://sketchfab.com/3d-models/low-poly-eyeball-82ce133e9b8b4c26a11b48aea473299b
+* author:	BurritoDog (https://sketchfab.com/burritodog)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Low Poly Eyeball" (https://sketchfab.com/3d-models/low-poly-eyeball-82ce133e9b8b4c26a11b48aea473299b) by BurritoDog (https://sketchfab.com/burritodog) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

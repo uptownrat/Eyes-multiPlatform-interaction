@@ -8,6 +8,10 @@
 </head>
 <body>
     <a-scene background="color:rgb(220, 220, 220)">
+        <a-assets>
+            <a-asset-item id="eye_model" response-type="arraybuffer" src="assets/scene.gltf"></a-asset-item>
+        </a-assets>
+
         <a-entity camera wasd-controls look-controls position="0 2.0 0">
             <a-entity cursor="rayOrigin:mouse;" raycaster="far:20; interval:200; objects:.interactive"></a-entity>
         </a-entity>
@@ -33,13 +37,28 @@
                     position="-7 7 0"
                     rotation="0 90 0">
             </a-entity>
-            <a-entity class="wall" id="right-wall"
+            <a-entity class="wall" id="back-wall"
                     geometry="primitive:plane; width:14; height:14"
                     material="color:rgb(220, 220, 220)"
                     position="0 7 -7"
                     rotation="0 0 -90">
             </a-entity>
+            <a-entity class="wall" id="front-wall"
+                    geometry="primitive:plane; width:14; height:14"
+                    material="color:rgb(0, 220, 220)"
+                    position="0 7 -7"
+                    rotation="0 0 -90">
+            </a-entity>
+            <a-entity class="wall" id="ceiling"
+                    geometry="primitive:plane; width:14; height:14"
+                    material="color:rgb(220, 0, 220)"
+                    position="0 7 -7"
+                    rotation="0 0 -90">
+            </a-entity>
         </a-entity>
+
+        <!--test eye-->
+        <a-entity id="eye" position="20 1 3" rotation="0 0 0" scale="1 1 1" gltf-model="#eye_model"></a-entity>
     </a-scene>
 </body>
 </html>
