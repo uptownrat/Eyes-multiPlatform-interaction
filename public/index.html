@@ -7,7 +7,7 @@
     <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
 </head>
 <body>
-    <a-scene background="color:rgb(220, 220, 220)">
+    <a-scene background="color:rgb(220, 220, 220)" obb-collider="showColliders: true">
         <a-assets>
             <a-asset-item id="eye_model" response-type="arraybuffer" src="assets/scene.gltf"></a-asset-item>
         </a-assets>
@@ -26,39 +26,39 @@
         <!--walls-->
         <a-entity>
             <a-entity class="wall" id="right-wall"
-                    geometry="primitive:plane; width:14; height:14"
+                    geometry="primitive:plane; width:14; height:10"
                     material="color:rgb(220, 220, 220)"
-                    position="7 7 0"
+                    position="7 5 0"
                     rotation="0 -90 0">
             </a-entity>
             <a-entity class="wall" id="left-wall"
-                    geometry="primitive:plane; width:14; height:14"
+                    geometry="primitive:plane; width:14; height:10"
                     material="color:rgb(220, 220, 220)"
-                    position="-7 7 0"
+                    position="-7 5 0"
                     rotation="0 90 0">
             </a-entity>
             <a-entity class="wall" id="back-wall"
-                    geometry="primitive:plane; width:14; height:14"
-                    material="color:rgb(220, 220, 220)"
-                    position="0 7 -7"
-                    rotation="0 0 -90">
+                    geometry="primitive:plane; width:14; height:10"
+                    material="color:rgb(220, 220, 0)"
+                    position="0 5 -7"
+                    rotation="0 0 0">
             </a-entity>
             <a-entity class="wall" id="front-wall"
-                    geometry="primitive:plane; width:14; height:14"
+                    geometry="primitive:plane; width:14; height:10"
                     material="color:rgb(0, 220, 220)"
-                    position="0 7 -7"
-                    rotation="0 0 -90">
+                    position="0 5 7"
+                    rotation="0 180 0">
             </a-entity>
             <a-entity class="wall" id="ceiling"
                     geometry="primitive:plane; width:14; height:14"
                     material="color:rgb(220, 0, 220)"
-                    position="0 7 -7"
-                    rotation="0 0 -90">
+                    position="0 10 0"
+                    rotation="90 0 0">
             </a-entity>
         </a-entity>
 
         <!--test eye-->
-        <a-entity id="eye" position="20 1 3" rotation="0 0 0" scale="1 1 1" gltf-model="#eye_model"></a-entity>
+        <a-entity id="eye" position="20 1 3" rotation="0 0 0" scale="1 1 1" gltf-model="#eye_model"  obb-collider></a-entity>
     </a-scene>
 </body>
 </html>
