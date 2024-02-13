@@ -10,12 +10,19 @@
     <a-scene background="color:rgb(220, 220, 220)" obb-collider="showColliders: true">
         <a-assets>
             <a-asset-item id="eye_model" response-type="arraybuffer" src="assets/scene.gltf"></a-asset-item>
+            <audio id="bgm" src="assets/bgm.mp3" preload="auto" crossorigin="anonymous"></audio>
+            <audio id="drop_sfx" src="assets/splat.mp3" preload="auto" crossorigin="anonymous"></audio>
         </a-assets>
 
+        <!--camera-->
         <a-entity camera wasd-controls look-controls position="0 2.0 0">
             <a-entity cursor="rayOrigin:mouse;" raycaster="far:20; interval:200; objects:.interactive"></a-entity>
         </a-entity>
 
+        <!--music-->
+        <a-entity sound="src:#bgm; autoplay:true;"></a-entity>
+
+        <!-------------    BOX   --------------->
         <a-entity class="ground"
                 geometry="primitive:plane; width:14; height:14"
                 material="color:rgb(150, 150, 150)"
@@ -39,19 +46,19 @@
             </a-entity>
             <a-entity class="wall" id="back-wall"
                     geometry="primitive:plane; width:14; height:10"
-                    material="color:rgb(220, 220, 0)"
+                    material="color:rgb(220, 220, 220)"
                     position="0 5 -7"
                     rotation="0 0 0">
             </a-entity>
             <a-entity class="wall" id="front-wall"
                     geometry="primitive:plane; width:14; height:10"
-                    material="color:rgb(0, 220, 220)"
+                    material="color:rgb(220, 220, 220)"
                     position="0 5 7"
                     rotation="0 180 0">
             </a-entity>
             <a-entity class="wall" id="ceiling"
                     geometry="primitive:plane; width:14; height:14"
-                    material="color:rgb(220, 0, 220)"
+                    material="color:rgb(220, 220, 220)"
                     position="0 10 0"
                     rotation="90 0 0">
             </a-entity>
