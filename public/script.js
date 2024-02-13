@@ -1,4 +1,3 @@
-//<a-entity id="eye" position="20 1 3" rotation="0 0 0" scale="1 1 1" gltf-model="#eye_model"  obb-collider></a-entity>
 var eyeCounter = 0;
 
 // helper for makeEye, didn't know if i was going to reuse this code block anywhere so it's its own function
@@ -7,6 +6,7 @@ function idMaker() {
     return eyeCounter;
 }
 
+// rng to make things short
 function rand(min, max) {
     return ((Math.random() * max) + min);
 }
@@ -19,9 +19,7 @@ function makeEye() {
     eye.setAttribute("rotation", String(rand(0, 180) + " " + rand(0, 180) + " " + rand(0, 180))); //
     eye.setAttribute("scale", String(rand(0.5, 2) + " " + rand(0.5, 2) + " " + rand(0.5, 2))); //randomize w/n 0.5-1.5 or 2
     eye.setAttribute("gltf-model", "#eye_model");
+    scene.appendChild(eye);
 }
 
-/*const box1 = document.querySelector("body");
-            const test = document.createElement("p");
-            test.setAttribute("id", inc());
-            box1.appendChild(test); */
+document.querySelector("#red_button").querySelector(".button").addEventListener("click", makeEye());
